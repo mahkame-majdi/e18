@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>filimo</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="assets/css/brands.css"/>
+        <link rel="stylesheet" href="assets/css/fontawesome.css"/>
+        <link rel="stylesheet" href="assets/css/solid.css"/>
+        <link rel="stylesheet" href="assets/css/regular.css"/>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
+        <script type="text/babel">
+            var rootElement = document.getElementById("root");
+            var popularMovies = {
+            title : "محبوب‌ترین‌های فیلیمو",
+            list: [
+                    {
+                        imageUrl: "https://static.cdn.asset.filimo.com/flmt/mov_134080_57100.jpg?width=165&quality=85&secret=ZcoYAtpfxolqx5EY_ca7DQ",
+                        link: "https://www.filimo.com/#main_section",
+                    },
+                    {
+                        imageUrl: "https://static.cdn.asset.filimo.com/flmt/mov_134270_57061.jpg?width=165&quality=85&secret=LwxKpvzJkgfU6GAvD-FsAw",
+                        link: "https://www.filimo.com/#main_section",
+                    },
+                    {
+                        imageUrl: "https://static.cdn.asset.filimo.com/flmt/mov_134078_57040.jpg?width=165&quality=85&secret=QVtRINpAmxZSVEeds1_BvQ",
+                        link: "https://www.filimo.com/#main_section",
+                    },
+                    {
+                        imageUrl: "https://static.cdn.asset.filimo.com/flmt/mov_134077_56979.jpg?width=165&quality=85&secret=rBQ-O24KigzVwn_LO_oEHw",
+                        link: "https://www.filimo.com/#main_section",
+                    },
+                    {
+                        imageUrl: "https://static.cdn.asset.filimo.com/flmt/mov_134076_56936.jpg?width=165&quality=85&secret=_CVtuKI6uRCAaUFSMZIXFw",
+                        link: "https://www.filimo.com/#main_section",
+                    },
+                    {
+                        imageUrl: "https://static.cdn.asset.filimo.com/flmt/mov_134075_56938.jpg?width=165&quality=85&secret=VdkUb5B6WwWfb9qJm4gtBA",
+                        link: "https://www.filimo.com/#main_section",
+                    },
+                ]
+            }
+            var popularMovies2 = {
+            title : "فیلم های رایگان",
+            list: [
+                    {
+                        imageUrl: "https://static.cdn.asset.filimo.com/flmt/mov_srl_11933_1-s.jpg",
+                        link: "https://www.filimo.com/#main_section",
+                    },
+                    {
+                        imageUrl: "https://static.cdn.asset.filimo.com/flmt/mov_13098_1-s.jpg",
+                        link: "https://www.filimo.com/#main_section",
+                    },
+                    {
+                        imageUrl: "https://static.cdn.asset.filimo.com/flmt/mov_33097_782-s.jpg",
+                        link: "https://www.filimo.com/#main_section",
+                    },
+                    {
+                        imageUrl: "https://static.cdn.asset.filimo.com/flmt/mov_24073_1-s.jpg",
+                        link: "https://www.filimo.com/#main_section",
+                    },
+                    {
+                        imageUrl: "https://static.cdn.asset.filimo.com/flmt/mov_15804_16979-s.jpg",
+                        link: "https://www.filimo.com/#main_section",
+                    },
+                    {
+                        imageUrl: "https://static.cdn.asset.filimo.com/flmt/mov_639_995-s.jpg",
+                        link: "https://www.filimo.com/#main_section",
+                    },
+                ]
+            }
+            var popularMovies3 = {
+            title : "محبوب‌ترین‌های فیلیمو",
+            list: [
+                    {
+                        imageUrl: "https://static.cdn.asset.filimo.com/flmt/mov_132148_54299-s.jpg",
+                        link: "https://www.filimo.com/#main_section",
+                    },
+                    {
+                        imageUrl: "https://static.cdn.asset.filimo.com/flmt/mov_131147_53880-s.jpg",
+                        link: "https://www.filimo.com/#main_section",
+                    },
+                    {
+                        imageUrl: "https://static.cdn.asset.filimo.com/flmt/mov_131938_54213-s.jpg",
+                        link: "https://www.filimo.com/#main_section",
+                    },
+                    {
+                        imageUrl: "https://static.cdn.asset.filimo.com/flmt/mov_125076_56170-s.jpg",
+                        link: "https://www.filimo.com/#main_section",
+                    },
+                    {
+                        imageUrl: "https://static.cdn.asset.filimo.com/flmt/mov_132897_55350-s.jpg",
+                        link: "https://www.filimo.com/#main_section",
+                    },
+                    {
+                        imageUrl: "https://static.cdn.asset.filimo.com/flmt/mov_132744_55152-s.jpg",
+                        link: "https://www.filimo.com/#main_section",
+                    },
+                ]
+            }
+            function MovieList(props){
+                return props.data.list.map(function(movie, index) {
+                    return(
+                        <li>
+                            <a href={movie.link} target="_blank">
+                            <img src={movie.imageUrl}/>
+                            </a>
+                        </li>
+                    )
+                })
+            }
+            var filimoBox = {
+                title : "فیلیمو‌باکس چیست؟",
+                list: [
+                    {
+                        image : "assets/images/picture1.png",
+                        header : "فیلیمو‌باکس چیست و چه امکاناتی دارد؟",
+                        linkUrl : "https://www.aparat.com/v/7uROr",
+                    },
+                    {
+                        image : "assets/images/picture2.png",
+                        header : "چطور با فیلیمو باکس فیلم تماشا کنیم؟",
+                        linkUrl : "https://www.aparat.com/v/KEW8c",
+                    },
+                    {
+                        image : "assets/images/picture3.png",
+                        header : "چطور با فیلیمو باکس کار کنیم؟",
+                        linkUrl : "https://www.filimo.com/m/131383",
+                    },
+                ]
+            }
+            var filimoBox2 = {
+                title : "روش نصب برنامه فیلیمو",
+                list: [
+                    {
+                        image : "assets/images/picture4.png",
+                        header : "چطور برنامه فیلیمو را روی تلویزیون خود نصب کنیم؟",
+                        linkUrl : "https://www.aparat.com/v/NLHWY",
+                    },
+                    {
+                        image : "assets/images/picture5.png",
+                        header : "برای تماشا روی تلویزیون‌های LG چه کار‌کنیم؟",
+                        linkUrl : "https://www.aparat.com/v/hg1TZ",
+                    },
+                    {
+                        image : "assets/images/picture6.png",
+                        header : "چطور با اتصال کابل به تلویزیون، فیلیمو تماشا کنیم؟",
+                        linkUrl : "https://www.aparat.com/v/l78K9",
+                    },
+                ]
+            }
+            var filimoBox3 = {
+                title : "فیلیمو‌باکس چیست؟",
+                list: [
+                    {
+                        image : "assets/images/picture7.png",
+                        header : "روش آیینه کردن یعنی ‌چی و چطور انجامش بدهیم؟",
+                        linkUrl : "https://www.aparat.com/v/UhCDR",
+                    },
+                    {
+                        image : "assets/images/picture8.png",
+                        header : "روش کست کردن یعنی چی و چطور انجامش بدهیم؟",
+                        linkUrl : "https://www.aparat.com/v/DCeB1",
+                    },
+                    {
+                        image : "assets/images/picture9.png",
+                        header : "چطور با جستجو در مرورگر تلویزیون، فیلیمو تماشا کنیم؟",
+                        linkUrl : "https://www.aparat.com/v/4Cold",
+                    },
+                ]
+            }
+            function Video(props){
+                return props.data.list.map(function(instruction) {
+                    return(
+                        <li>
+                            <a href={instruction.linkUrl} target="_blank">
+                                <img src={instruction.image}/>
+                                <div className="circle"></div>
+                                <div className="triangle"></div>
+                                <h4>{instruction.header}</h4>
+                            </a>
+                        </li>
+                    )
+                })
+            }
+            var element = (<div>
+                <div className="popular">
+                    <div className="container">
+                        <h2 className="title">محبوب‌ترین‌های فیلیمو</h2>
+                        <ul>
+                        <MovieList data={popularMovies}></MovieList>
+                        </ul>
+                   </div>
+                </div>
+                <div className="popular">
+                    <div className="container">
+                        <h2 className="title">فیلم های رایگان</h2>
+                        <ul>
+                        <MovieList data={popularMovies2}></MovieList>
+                        </ul>
+                   </div>
+                </div>
+                <div className="popular">
+                    <div className="container">
+                        <h2 className="title">محبوب‌ترین‌های فیلیمو</h2>
+                        <ul>
+                        <MovieList data={popularMovies3}></MovieList>
+                        </ul>
+                   </div>
+                </div>
+                <div className="box">
+                   <div className="container">
+                    <h2 className="title">فیلیمو‌باکس چیست؟</h2>
+                        <ul>
+                        <Video data={filimoBox}></Video>
+                        </ul>
+                    </div>
+                </div>
+                <div className="box">
+                   <div className="container">
+                    <h2 className="title">روش نصب برنامه فیلیمو</h2>
+                        <ul>
+                        <Video data={filimoBox2}></Video>
+                        </ul>
+                    </div>
+                </div>
+                <div className="box">
+                   <div className="container">
+                    <h2 className="title"> دیدن صفحه گوشی روی تلویزیون.</h2>
+                        <ul>
+                        <Video data={filimoBox3}></Video>
+                        </ul>
+                    </div>
+                </div>
+                </div>)
+            ReactDOM.render(element, rootElement)
+        </script>
+    </body>
+</html>
